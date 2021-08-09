@@ -1,3 +1,5 @@
+import 'package:app/courses/CATLectures.dart';
+import 'package:app/courses/CLATLectures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
@@ -50,8 +52,28 @@ class _CoursePageState extends State<CoursePage> {
         mainAxisSpacing: 12.0,
         padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
         children: <Widget>[
-          myItems('CAT', 0xffb74093),
-          myItems('CLAT', 0xffb72033),
+          TextButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => CATLectures(),
+                ),
+              );
+            },
+            child: myItems('CAT', 0xffb74093),
+          ),
+          TextButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => CLATLectures(),
+                ),
+              );
+            },
+            child: myItems('CLAT', 0xffb72033),
+          ),
           myItems('MAT', 0xffb20334),
           myItems('BBA', 0xffb38432),
           myItems('SSC', 0xffb00432),

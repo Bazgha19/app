@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               children: [
                 MyHeaderDrawer(),
-                MyDrawerList(),
+                myDrawerList(),
               ],
             ),
           ),
@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget MyDrawerList() {
+  Widget myDrawerList() {
     return Container(
       padding: EdgeInsets.only(
         top: 15,
