@@ -3,6 +3,7 @@ import 'package:app/contacts.dart';
 import 'package:app/courses.dart';
 import 'package:app/dashboard.dart';
 import 'package:app/my_drawer_header.dart';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: AnimatedSplashScreen(
+        backgroundColor: Colors.blueGrey.shade200,
+        splash: Image.asset('images/logo.png'),
+        nextScreen: HomePage(),
+      ),
     );
   }
 }
