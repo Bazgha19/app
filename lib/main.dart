@@ -17,9 +17,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: AnimatedSplashScreen(
-        backgroundColor: Colors.blueGrey.shade200,
-        splash: Image.asset('images/logo.png'),
+        // backgroundColor: Colors.blueGrey.shade200,
+        splash: Image.asset('images/splashscreen.png'),
+        splashIconSize: 165.0,
+        splashTransition: SplashTransition.rotationTransition,
         nextScreen: HomePage(),
+        duration: 1000,
       ),
     );
   }
@@ -47,7 +50,7 @@ class _HomePageState extends State<HomePage> {
     }
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blueGrey[700],
+        backgroundColor: Colors.lightBlue.shade900,
         title: Text("Dhirati Education"),
       ),
       body: container,
@@ -89,7 +92,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget menuItem(int id, String title, IconData icon, bool selected) {
     return Material(
-      color: selected ? Colors.grey[300] : Colors.transparent,
+      color: selected ? Colors.lightBlue.shade500 : Colors.transparent,
       child: InkWell(
         onTap: () {
           Navigator.pop(context);

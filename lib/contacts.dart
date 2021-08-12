@@ -11,7 +11,7 @@ class _ContactPageState extends State<ContactPage> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.lightBlue.shade100,
         body: SafeArea(
           child: Center(
             child: Column(
@@ -37,7 +37,7 @@ class _ContactPageState extends State<ContactPage> {
                     fontFamily: 'SourceSansPro',
                     fontSize: 20.0,
                     letterSpacing: 2.5,
-                    color: Colors.teal[100],
+                    color: Colors.lightBlue.shade600,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -45,7 +45,7 @@ class _ContactPageState extends State<ContactPage> {
                   height: 20.0,
                   width: 100.0,
                   child: Divider(
-                    color: Colors.teal.shade100,
+                    color: Colors.lightBlue.shade700,
                   ),
                 ),
                 Card(
@@ -55,7 +55,7 @@ class _ContactPageState extends State<ContactPage> {
                   child: ListTile(
                     leading: Icon(
                       Icons.phone,
-                      color: Colors.teal,
+                      color: Colors.lightBlue.shade700,
                     ),
                     title: Text(
                       '+998273724671',
@@ -74,7 +74,7 @@ class _ContactPageState extends State<ContactPage> {
                   child: ListTile(
                     leading: Icon(
                       Icons.mail,
-                      color: Colors.teal,
+                      color: Colors.lightBlue.shade700,
                     ),
                     title: Text(
                       'dhiratieducation@gmail.com',
